@@ -4,7 +4,7 @@ import { Navbar } from './components/Navbar';
 import { HomePage } from './pages/Home';
 import { MissionPage } from './pages/Mission';
 
-export default function App() {
+export function App() {
   return (
     <Router>
       <div className="min-h-screen bg-deep-900">

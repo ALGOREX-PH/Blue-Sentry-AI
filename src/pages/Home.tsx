@@ -1,26 +1,23 @@
 import React from 'react';
-import { Hero } from '../components/Hero';
-import { Mission } from '../components/Mission';
-import { Crisis } from '../components/Crisis';
-import { Solution } from '../components/Solution';
-import { Services } from '../components/Services';
-import { Vision } from '../components/Vision';
-import { Features } from '../components/Features';
-import { Footer } from '../components/Footer';
+import { Layout } from '../components/layout/Layout';
+import { Hero } from '../components/home/Hero';
+import { Mission } from '../components/home/Mission';
+import { Crisis } from '../components/home/Crisis';
+import { Solution } from '../components/home/Solution';
+import { Services } from '../components/home/Services';
+import { Vision } from '../components/home/Vision';
+import { Features } from '../components/home/Features';
 
 export function HomePage() {
   return (
-    <>
-      <main>
-        <Hero />
-        <Mission />
-        <Crisis />
-        <Solution />
-        <Services />
-        <Vision />
-        <Features />
-      </main>
-      <Footer />
-    </>
+    <Layout>
+      <Hero />
+      <Mission />
+      <Crisis />
+      <Solution />
+      <Services />
+      <Vision />
+      <Features />
+    </Layout>
   );
 }

@@ -9,51 +9,27 @@
   --color-purple: #5e239d;
 }
 
-body {
-  background-color: var(--color-deep);
-  color: #e2e8f0;
+@layer base {
+  body {
+    @apply bg-deep-900 text-gray-100;
+  }
 }
 
-.glass-card {
-  background: rgba(1, 63, 77, 0.2);
-  backdrop-filter: blur(8px);
-  border: 1px solid rgba(0, 255, 255, 0.1);
-  transition: all 0.3s ease-in-out;
-}
+@layer components {
+  .glass-card {
+    @apply bg-opacity-20 backdrop-blur-md border border-aqua/10 transition-all duration-300;
+    background-color: rgba(1, 63, 77, 0.2);
+  }
 
-.glass-card:hover {
-  border-color: rgba(0, 255, 255, 0.2);
-  background: rgba(1, 63, 77, 0.3);
-}
+  .glass-card:hover {
+    @apply border-aqua/20 bg-opacity-30;
+    background-color: rgba(1, 63, 77, 0.3);
+  }
 
-.bg-gradient-radial {
-  background: radial-gradient(circle at center,
-    var(--color-marine) 0%,
-    var(--color-deep) 60%,
-    var(--color-deep) 100%
-  );
-}
+  .text-glow {
+    @apply transition-all duration-300;
+    text-shadow: 0 0 10px rgba(0, 255, 255, 0.5);
+  }
 
-.bg-gradient-deep {
-  background: linear-gradient(
-    135deg,
-    var(--color-deep) 0%,
-    var(--color-marine) 50%,
-    var(--color-purple) 100%
-  );
-}
-
-.text-glow {
-  text-shadow: 0 0 10px rgba(0, 255, 255, 0.5);
-}
-
-.btn-primary {
-  background: linear-gradient(45deg, var(--color-marine), var(--color-purple));
-  border: 1px solid rgba(0, 255, 255, 0.2);
-  transition: all 0.3s ease-in-out;
-}
-
-.btn-primary:hover {
-  border-color: var(--color-aqua);
-  box-shadow: 0 0 20px rgba(0, 255, 255, 0.2);
-}
+  .shadow-glow {
+    @apply transition-all

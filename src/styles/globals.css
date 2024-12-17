@@ -32,4 +32,5 @@
   }
 
   .shadow-glow {
-    @apply transition-all
+    @apply transition-all;
+  }

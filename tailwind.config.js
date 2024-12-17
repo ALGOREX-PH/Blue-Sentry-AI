@@ -6,7 +6,14 @@ export default {
       colors: {
         aqua: '#00ffff',
         marine: '#013f4d',
-        deep: '#001f3f',
+        deep: {
+          800: '#001a33',
+          900: '#001f3f',
+        },
+        ocean: {
+          800: '#004466',
+          900: '#003355',
+        },
         purple: '#5e239d',
         surface: {
           900: 'rgba(1, 63, 77, 0.95)',

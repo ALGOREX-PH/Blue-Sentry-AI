@@ -3,7 +3,7 @@ import { Button } from '../ui/Button';
 
 export function MissionHero() {
   return (
-    <section className="relative min-h-[80vh] flex items-center">
+    <section className="relative min-h-[80vh] flex items-center pt-20">
       <div 
         className="absolute inset-0 bg-cover bg-center -z-10"
         style={{
@@ -16,7 +16,7 @@ export function MissionHero() {
       
       <div className="container mx-auto px-4">
         <div className="max-w-3xl">
-          <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+          <h1 className="text-4xl md:text-6xl font-bold text-aqua mb-6 text-glow">
             Our Mission: Protecting the Oceans, Preserving the Future
           </h1>
           <p className="text-xl text-blue-200 mb-8">

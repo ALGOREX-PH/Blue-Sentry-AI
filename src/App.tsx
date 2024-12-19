@@ -4,6 +4,7 @@ import { Navbar } from './components/Navbar';
 import { HomePage } from './pages/Home';
 import { MissionPage } from './pages/Mission';
 import { SolutionPage } from './pages/Solution';
+import { ServicesPage } from './pages/Services';
 
 export function App() {
   return (
@@ -15,6 +16,7 @@ export function App() {
           <Route path="/" element={<HomePage />} />
           <Route path="/mission" element={<MissionPage />} />
           <Route path="/solution" element={<SolutionPage />} />
+          <Route path="/services" element={<ServicesPage />} />
         </Routes>
       </div>
     </Router>

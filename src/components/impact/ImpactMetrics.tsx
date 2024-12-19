@@ -11,11 +11,11 @@ interface MetricCardProps {
 
 function MetricCard({ icon, value, label, description }: MetricCardProps) {
   return (
-    <Card className="text-center">
+    <Card className="text-center p-4 sm:p-6">
       <div className="text-aqua mb-4">{icon}</div>
-      <div className="text-4xl font-bold text-white mb-2">{value}</div>
-      <div className="text-xl font-medium text-blue-300 mb-2">{label}</div>
-      <p className="text-blue-200">{description}</p>
+      <div className="text-3xl sm:text-4xl font-bold text-white mb-2">{value}</div>
+      <div className="text-lg sm:text-xl font-medium text-blue-300 mb-2">{label}</div>
+      <p className="text-sm sm:text-base text-blue-200">{description}</p>
     </Card>
   );
 }
@@ -45,7 +45,7 @@ export function ImpactMetrics() {
   return (
     <section className="py-20 bg-deep-800">
       <div className="container mx-auto px-4">
-        <div className="grid md:grid-cols-3 gap-8">
+        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 md:gap-8">
           {metrics.map((metric, index) => (
             <MetricCard key={index} {...metric} />
           ))}

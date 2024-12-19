@@ -20,7 +20,7 @@ export function Navbar() {
         <div className="hidden md:flex space-x-8">
           <Link to="/" className={isActive('/')}>Home</Link>
           <Link to="/mission" className={isActive('/mission')}>Mission</Link>
-          <a href="#solution" className="hover:text-blue-300 transition-colors">Solution</a>
+          <Link to="/solution" className={isActive('/solution')}>Solution</Link>
           <a href="#services" className="hover:text-blue-300 transition-colors">Services</a>
           <a href="#impact" className="hover:text-blue-300 transition-colors">Impact</a>
         </div>

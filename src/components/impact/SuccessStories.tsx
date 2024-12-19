@@ -12,24 +12,24 @@ interface CaseStudyProps {
 function CaseStudy({ title, challenge, solution, outcome, imageUrl }: CaseStudyProps) {
   return (
     <Card className="overflow-hidden">
-      <div 
-        className="h-48 bg-cover bg-center" 
+      <div
+        className="h-40 sm:h-48 bg-cover bg-center"
         style={{ backgroundImage: `url(${imageUrl})` }}
       />
-      <div className="p-6">
-        <h3 className="text-xl font-semibold mb-4 text-blue-100">{title}</h3>
+      <div className="p-4 sm:p-6">
+        <h3 className="text-lg sm:text-xl font-semibold mb-3 sm:mb-4 text-blue-100">{title}</h3>
         <div className="space-y-4">
           <div>
             <h4 className="font-medium text-blue-300 mb-2">Challenge</h4>
-            <p className="text-blue-200">{challenge}</p>
+            <p className="text-sm sm:text-base text-blue-200">{challenge}</p>
           </div>
           <div>
             <h4 className="font-medium text-blue-300 mb-2">Solution</h4>
-            <p className="text-blue-200">{solution}</p>
+            <p className="text-sm sm:text-base text-blue-200">{solution}</p>
           </div>
           <div>
             <h4 className="font-medium text-blue-300 mb-2">Outcome</h4>
-            <ul className="list-disc list-inside text-blue-200">
+            <ul className="list-disc list-inside text-sm sm:text-base text-blue-200">
               {outcome.map((item, index) => (
                 <li key={index}>{item}</li>
               ))}
@@ -70,8 +70,8 @@ export function SuccessStories() {
   return (
     <section className="py-20 bg-gradient-to-b from-deep-900 to-marine">
       <div className="container mx-auto px-4">
-        <h2 className="text-3xl font-bold text-aqua mb-12 text-center">Success Stories</h2>
-        <div className="grid md:grid-cols-2 gap-8 max-w-6xl mx-auto">
+        <h2 className="text-2xl sm:text-3xl font-bold text-aqua mb-8 sm:mb-12 text-center">Success Stories</h2>
+        <div className="grid sm:grid-cols-2 gap-6 sm:gap-8 max-w-6xl mx-auto">
           {caseStudies.map((study, index) => (
             <CaseStudy key={index} {...study} />
           ))}

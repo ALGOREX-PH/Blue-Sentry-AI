@@ -3,9 +3,13 @@ export default {
   content: ['./index.html', './src/**/*.{js,ts,jsx,tsx}'],
   theme: {
     extend: {
+      boxShadow: {
+        'lg': '0 10px 15px -3px rgba(0, 255, 255, 0.05), 0 4px 6px -2px rgba(0, 0, 0, 0.05)',
+      },
       colors: {
         aqua: '#00ffff',
         marine: '#013f4d',
+        'blue-400': '#60a5fa',
         deep: {
           800: '#001a33',
           900: '#001f3f',

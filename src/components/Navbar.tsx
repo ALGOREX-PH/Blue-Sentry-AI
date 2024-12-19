@@ -22,7 +22,7 @@ export function Navbar() {
           <Link to="/mission" className={isActive('/mission')}>Mission</Link>
           <Link to="/solution" className={isActive('/solution')}>Solution</Link>
           <Link to="/services" className={isActive('/services')}>Services</Link>
-          <a href="#impact" className="hover:text-blue-300 transition-colors">Impact</a>
+          <Link to="/impact" className={isActive('/impact')}>Impact</Link>
         </div>
       </div>
     </nav>

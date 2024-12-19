@@ -1,14 +1,18 @@
-import React from 'react';
-import { Link, useLocation, useNavigate } from 'react-router-dom';
-import { Shield, Menu, X } from 'lucide-react';
+import React, { useState, useEffect } from 'react';
+import { useLocation, useNavigate } from 'react-router-dom';
+import { Logo } from './navbar/Logo';
+import { NavLink } from './navbar/NavLink';
+import { MobileNav } from './navbar/MobileNav';
+import { MobileNavButton } from './navbar/MobileNavButton';
 
 export function Navbar() {
   const location = useLocation();
   const navigate = useNavigate();
-  const [isMenuOpen, setIsMenuOpen] = React.useState(false);
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [isScrolled, setIsScrolled] = useState(false);
   
   const isActive = (path: string) => {
-    return location.pathname === path ? 'text-aqua' : 'text-white hover:text-blue-300';
+    return location.pathname === path;
   };
 
   const handleNavigation = (path: string) => {
@@ -16,43 +20,42 @@ export function Navbar() {
     setIsMenuOpen(false);
   };
 
+  useEffect(() => {
+    const handleScroll = () => {
+      setIsScrolled(window.scrollY > 20);
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
   return (
-    <nav className="bg-deep-900/95 backdrop-blur-sm text-white py-4 fixed w-full top-0 z-50 border-b border-aqua/10">
+    <nav className={`
+      fixed w-full top-0 z-50 transition-all duration-300
+      ${isScrolled ? 'py-2 bg-deep-900/95 shadow-lg backdrop-blur-sm' : 'py-4 bg-transparent'}
+      ${isScrolled ? 'border-b border-aqua/10' : ''}
+    `}>
       <div className="container mx-auto px-4 flex items-center justify-between">
-        <Link to="/" className="flex items-center space-x-2">
-          <Shield className="h-6 w-6 sm:h-8 sm:w-8 text-aqua" />
-          <span className="text-xl font-bold">Blue Sentry AI</span>
-        </Link>
+        <Logo />
         
-        {/* Desktop Navigation */}
         <div className="hidden md:flex space-x-8">
-          <Link to="/" className={isActive('/')}>Home</Link>
-          <Link to="/mission" className={isActive('/mission')}>Mission</Link>
-          <Link to="/solution" className={isActive('/solution')}>Solution</Link>
-          <Link to="/services" className={isActive('/services')}>Services</Link>
-          <Link to="/impact" className={isActive('/impact')}>Impact</Link>
+          <NavLink to="/" isActive={isActive('/')}>Home</NavLink>
+          <NavLink to="/mission" isActive={isActive('/mission')}>Mission</NavLink>
+          <NavLink to="/solution" isActive={isActive('/solution')}>Solution</NavLink>
+          <NavLink to="/services" isActive={isActive('/services')}>Services</NavLink>
+          <NavLink to="/impact" isActive={isActive('/impact')}>Impact</NavLink>
         </div>
 
-        {/* Mobile Menu Button */}
-        <button 
-          className="md:hidden text-aqua"
+        <MobileNavButton 
+          isOpen={isMenuOpen}
           onClick={() => setIsMenuOpen(!isMenuOpen)}
-        >
-          {isMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
-        </button>
+        />
 
-        {/* Mobile Navigation */}
-        {isMenuOpen && (
-          <div className="absolute top-full left-0 right-0 bg-deep-900/95 backdrop-blur-sm md:hidden border-b border-aqua/10">
-            <div className="container mx-auto px-4 py-4 flex flex-col space-y-4">
-              <button onClick={() => handleNavigation('/')} className={`text-left ${isActive('/')}`}>Home</button>
-              <button onClick={() => handleNavigation('/mission')} className={`text-left ${isActive('/mission')}`}>Mission</button>
-              <button onClick={() => handleNavigation('/solution')} className={`text-left ${isActive('/solution')}`}>Solution</button>
-              <button onClick={() => handleNavigation('/services')} className={`text-left ${isActive('/services')}`}>Services</button>
-              <button onClick={() => handleNavigation('/impact')} className={`text-left ${isActive('/impact')}`}>Impact</button>
-            </div>
-          </div>
-        )}
+        <MobileNav 
+          isOpen={isMenuOpen}
+          onNavigate={handleNavigation}
+          isActive={isActive}
+        />
       </div>
     </nav>
   );

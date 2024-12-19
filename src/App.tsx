@@ -5,6 +5,7 @@ import { HomePage } from './pages/Home';
 import { MissionPage } from './pages/Mission';
 import { SolutionPage } from './pages/Solution';
 import { ServicesPage } from './pages/Services';
+import { ImpactPage } from './pages/Impact';
 
 export function App() {
   return (
@@ -17,6 +18,7 @@ export function App() {
           <Route path="/mission" element={<MissionPage />} />
           <Route path="/solution" element={<SolutionPage />} />
           <Route path="/services" element={<ServicesPage />} />
+          <Route path="/impact" element={<ImpactPage />} />
         </Routes>
       </div>
     </Router>

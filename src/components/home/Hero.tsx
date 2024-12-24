@@ -7,8 +7,7 @@ import { Counter } from '../Counter';
 export function Hero() {
   return (
     <section className="relative min-h-screen pt-32 pb-20">
-      <div className="absolute inset-0 bg-gradient-shine mix-blend-overlay" />
-      <div className="container mx-auto px-4">
+      <div className="container mx-auto px-4 relative z-10">
         <div className="text-center max-w-4xl mx-auto">
           <h1 className="text-4xl md:text-6xl font-bold text-aqua mb-6 text-glow">
             Empowering Humanity to Protect Our Oceans
@@ -51,6 +50,7 @@ export function Hero() {
           </div>
         </div>
       </div>
+      <div className="absolute inset-0 bg-gradient-shine mix-blend-overlay -z-0" />
     </section>
   );
 }

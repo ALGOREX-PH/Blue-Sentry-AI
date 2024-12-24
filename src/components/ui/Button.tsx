@@ -25,11 +25,7 @@ export function Button({
   const classes = `${baseStyles} ${variants[variant]} ${className}`;
 
   if (to) {
-    return (
-      <Link to={to} className={classes}>
-        {children}
-      </Link>
-    );
+    return <Link to={to} className={classes}>{children}</Link>;
   }
 
   return (

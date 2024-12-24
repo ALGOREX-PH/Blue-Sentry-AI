@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import { Search, Play, Handshake } from 'lucide-react';
 import { Button } from '../ui/Button';
 import { Counter } from '../Counter';
@@ -21,7 +22,7 @@ export function Hero() {
               <Search className="w-5 h-5" />
               Explore Our Technology
             </Button>
-            <Button variant="secondary">
+            <Button variant="secondary" to="/demo">
               <Play className="w-5 h-5" />
               See It in Action
             </Button>

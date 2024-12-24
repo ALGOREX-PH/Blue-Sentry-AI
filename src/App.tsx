@@ -6,6 +6,7 @@ import { MissionPage } from './pages/Mission';
 import { SolutionPage } from './pages/Solution';
 import { ServicesPage } from './pages/Services';
 import { ImpactPage } from './pages/Impact';
+import { SeeItInActionPage } from './pages/SeeItInAction';
 
 export function App() {
   return (
@@ -19,6 +20,7 @@ export function App() {
           <Route path="/solution" element={<SolutionPage />} />
           <Route path="/services" element={<ServicesPage />} />
           <Route path="/impact" element={<ImpactPage />} />
+          <Route path="/demo" element={<SeeItInActionPage />} />
         </Routes>
       </div>
     </Router>

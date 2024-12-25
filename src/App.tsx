@@ -10,6 +10,7 @@ import { EcosystemProtectionPage } from './pages/EcosystemProtection';
 import { PartnerWithUsPage } from './pages/PartnerWithUs';
 import { ImpactPage } from './pages/Impact';
 import { SeeItInActionPage } from './pages/SeeItInAction';
+import { RapidResponsePage } from './pages/RapidResponse';
 
 export function App() {
   return (
@@ -27,6 +28,7 @@ export function App() {
           <Route path="/partner" element={<PartnerWithUsPage />} />
           <Route path="/impact" element={<ImpactPage />} />
           <Route path="/demo" element={<SeeItInActionPage />} />
+          <Route path="/rapid-response" element={<RapidResponsePage />} />
         </Routes>
       </div>
     </Router>

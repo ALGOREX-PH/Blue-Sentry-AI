@@ -25,7 +25,7 @@ export function Hero() {
               <Play className="w-5 h-5" />
               See It in Action
             </Button>
-            <Button variant="secondary">
+            <Button variant="secondary" to="/partner">
               <Handshake className="w-5 h-5" />
               Partner with Us
             </Button>

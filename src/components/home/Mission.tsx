@@ -1,6 +1,7 @@
 import React from 'react';
 import { Shield, Waves, Globe } from 'lucide-react';
 import { Card } from '../ui/Card';
+import { Link } from 'react-router-dom';
 
 interface MissionCardProps {
   icon: React.ReactNode;
@@ -37,13 +38,15 @@ export function Mission() {
           <p className="text-lg text-blue-200 mb-12">
             By detecting and preventing oceanic disasters, we enable stakeholders to safeguard biodiversity, reduce economic loss, and protect communities.
           </p>
-
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <Link to = "/technology">
             <MissionCard
               icon={<Waves className="w-12 h-12" />}
               title="AI & Satellite Tech"
               description="Cutting-edge technology for ocean monitoring"
             />
+            </Link>
+            
             <MissionCard
               icon={<Shield className="w-12 h-12" />}
               title="Ecosystem Protection"

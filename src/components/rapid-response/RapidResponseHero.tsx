@@ -9,7 +9,6 @@ export function RapidResponseHero() {
       <div className="container mx-auto px-4 relative z-10">
         <div className="max-w-4xl">
           <div className="flex items-center gap-3 mb-6">
-            <Clock className="w-8 h-8 text-aqua" />
             <h1 className="text-4xl md:text-6xl font-bold text-aqua text-glow">
               When Every Second Counts
             </h1>

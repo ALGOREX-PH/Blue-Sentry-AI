@@ -54,11 +54,13 @@ export function Mission() {
               description="Safeguarding marine life and habitats"
             />
             </Link>
+            <Link to="/rapid-response">
             <MissionCard
               icon={<Globe className="w-12 h-12" />}
               title="Rapid Response"
               description="Minimizing damage through quick detection"
             />
+            </Link>
           </div>
         </div>
       </div>

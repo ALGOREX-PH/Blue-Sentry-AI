@@ -5,6 +5,7 @@ import { HomePage } from './pages/Home';
 import { MissionPage } from './pages/Mission';
 import { SolutionPage } from './pages/Solution';
 import { ServicesPage } from './pages/Services';
+import { AiSatelliteTechPage } from './pages/AiSatelliteTech';
 import { PartnerWithUsPage } from './pages/PartnerWithUs';
 import { ImpactPage } from './pages/Impact';
 import { SeeItInActionPage } from './pages/SeeItInAction';
@@ -20,6 +21,7 @@ export function App() {
           <Route path="/mission" element={<MissionPage />} />
           <Route path="/solution" element={<SolutionPage />} />
           <Route path="/services" element={<ServicesPage />} />
+          <Route path="/technology" element={<AiSatelliteTechPage />} />
           <Route path="/partner" element={<PartnerWithUsPage />} />
           <Route path="/impact" element={<ImpactPage />} />
           <Route path="/demo" element={<SeeItInActionPage />} />

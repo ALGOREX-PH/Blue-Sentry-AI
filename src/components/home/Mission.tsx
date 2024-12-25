@@ -47,11 +47,13 @@ export function Mission() {
             />
             </Link>
             
+            <Link to="/ecosystem">
             <MissionCard
               icon={<Shield className="w-12 h-12" />}
               title="Ecosystem Protection"
               description="Safeguarding marine life and habitats"
             />
+            </Link>
             <MissionCard
               icon={<Globe className="w-12 h-12" />}
               title="Rapid Response"

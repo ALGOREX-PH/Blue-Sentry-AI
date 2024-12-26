@@ -49,7 +49,7 @@ export function Crisis() {
               imageUrl="https://images.unsplash.com/photo-1566576721346-d4a3b4eaeb55?auto=format&fit=crop&w=800&q=80"
             />
             </Link>
-            <Link to="/">
+            <Link to="/environmental-damage">
             <ImpactCard
               title="Environmental Damage"
               description="Long-lasting effects on water quality and marine habitats"

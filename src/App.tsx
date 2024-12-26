@@ -7,6 +7,7 @@ import { SolutionPage } from './pages/Solution';
 import { ServicesPage } from './pages/Services';
 import { AiSatelliteTechPage } from './pages/AiSatelliteTech';
 import { EcosystemProtectionPage } from './pages/EcosystemProtection';
+import { BiodiversityLossPage } from './pages/BiodiversityLoss';
 import { PartnerWithUsPage } from './pages/PartnerWithUs';
 import { ImpactPage } from './pages/Impact';
 import { SeeItInActionPage } from './pages/SeeItInAction';
@@ -25,6 +26,7 @@ export function App() {
           <Route path="/services" element={<ServicesPage />} />
           <Route path="/technology" element={<AiSatelliteTechPage />} />
           <Route path="/ecosystem" element={<EcosystemProtectionPage />} />
+          <Route path="/biodiversity" element={<BiodiversityLossPage />} />
           <Route path="/partner" element={<PartnerWithUsPage />} />
           <Route path="/impact" element={<ImpactPage />} />
           <Route path="/demo" element={<SeeItInActionPage />} />

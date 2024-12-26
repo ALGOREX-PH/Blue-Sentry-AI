@@ -9,6 +9,7 @@ import { AiSatelliteTechPage } from './pages/AiSatelliteTech';
 import { EcosystemProtectionPage } from './pages/EcosystemProtection';
 import { BiodiversityLossPage } from './pages/BiodiversityLoss';
 import { EconomicImpactPage } from './pages/EconomicImpact';
+import { EnvironmentalDamagePage } from './pages/EnvironmentalDamage';
 import { PartnerWithUsPage } from './pages/PartnerWithUs';
 import { ImpactPage } from './pages/Impact';
 import { SeeItInActionPage } from './pages/SeeItInAction';
@@ -29,6 +30,7 @@ export function App() {
           <Route path="/ecosystem" element={<EcosystemProtectionPage />} />
           <Route path="/biodiversity" element={<BiodiversityLossPage />} />
           <Route path="/economic-impact" element={<EconomicImpactPage />} />
+          <Route path="/environmental-damage" element={<EnvironmentalDamagePage />} />
           <Route path="/partner" element={<PartnerWithUsPage />} />
           <Route path="/impact" element={<ImpactPage />} />
           <Route path="/demo" element={<SeeItInActionPage />} />

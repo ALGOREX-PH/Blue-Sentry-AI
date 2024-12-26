@@ -1,6 +1,7 @@
 import React from 'react';
 import { AlertTriangle } from 'lucide-react';
 import { Card } from '../ui/Card';
+import { Link } from 'react-router-dom';
 
 interface ImpactCardProps {
   title: string;
@@ -34,21 +35,27 @@ export function Crisis() {
           </div>
 
           <div className="grid md:grid-cols-3 gap-8 mb-16">
+            <Link to="/biodiversity">
             <ImpactCard
               title="Biodiversity Loss"
               description="Devastating effects on marine ecosystems and wildlife populations"
               imageUrl="https://images.unsplash.com/photo-1583212292454-1fe6229603b7?auto=format&fit=crop&w=800&q=80"
             />
+            </Link>
+            <Link to="/economic-impact">
             <ImpactCard
               title="Economic Impact"
               description="Severe consequences for coastal communities and maritime industries"
               imageUrl="https://images.unsplash.com/photo-1566576721346-d4a3b4eaeb55?auto=format&fit=crop&w=800&q=80"
             />
+            </Link>
+            <Link to="/">
             <ImpactCard
               title="Environmental Damage"
               description="Long-lasting effects on water quality and marine habitats"
               imageUrl="https://images.unsplash.com/photo-1611273426858-450d8e3c9fce?auto=format&fit=crop&w=800&q=80"
             />
+            </Link>
           </div>
 
           <Card className="p-8">

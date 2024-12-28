@@ -57,7 +57,7 @@ export function Crisis() {
             />
             </Link>
           </div>
-
+          <Link to="/challenges">
           <Card className="p-8">
             <div className="flex items-start gap-4">
               <AlertTriangle className="w-6 h-6 text-red-400 flex-shrink-0 mt-1" />
@@ -87,6 +87,7 @@ export function Crisis() {
               </div>
             </div>
           </Card>
+          </Link>
         </div>
       </div>
     </section>

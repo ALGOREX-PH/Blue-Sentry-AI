@@ -36,11 +36,13 @@ export function Solution() {
               description="Advanced satellite imagery for comprehensive ocean monitoring"
             />
             </Link>
+            <Link to="/ai-technology">
             <SolutionCard
               icon={<Brain className="w-12 h-12" />}
               title="Proprietary AI Algorithms"
               description="Cutting-edge AI for accurate oil detection"
             />
+            </Link>
             <SolutionCard
               icon={<Bell className="w-12 h-12" />}
               title="Actionable Insights"

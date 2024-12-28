@@ -1,7 +1,7 @@
 import React from 'react';
 import { Brain, Satellite, Bell } from 'lucide-react';
 import { Card } from '../ui/Card';
-
+import { Link } from 'react-router-dom';
 interface SolutionCardProps {
   icon: React.ReactNode;
   title: string;
@@ -29,11 +29,13 @@ export function Solution() {
           </div>
 
           <div className="grid md:grid-cols-3 gap-8 mb-16">
+            <Link to="/sar-technology">
             <SolutionCard
               icon={<Satellite className="w-12 h-12" />}
               title="Sentinel-1 SAR Data"
               description="Advanced satellite imagery for comprehensive ocean monitoring"
             />
+            </Link>
             <SolutionCard
               icon={<Brain className="w-12 h-12" />}
               title="Proprietary AI Algorithms"

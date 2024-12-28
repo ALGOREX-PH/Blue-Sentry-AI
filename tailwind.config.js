@@ -29,6 +29,7 @@ export default {
         'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
         'gradient-conic': 'conic-gradient(var(--tw-gradient-stops))',
         'gradient-shine': 'linear-gradient(45deg, rgba(0, 255, 255, 0.15) 0%, rgba(0, 31, 63, 0.35) 100%)',
+        'spin-reverse': 'spin 6s linear infinite reverse',
       },
     },
   },

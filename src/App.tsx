@@ -10,6 +10,7 @@ import { EcosystemProtectionPage } from './pages/EcosystemProtection';
 import { BiodiversityLossPage } from './pages/BiodiversityLoss';
 import { EconomicImpactPage } from './pages/EconomicImpact';
 import { EnvironmentalDamagePage } from './pages/EnvironmentalDamage';
+import { Sentinel1SarDataPage } from './pages/Sentinel1SarData';
 import { ChallengesWithCurrentMethodsPage } from './pages/ChallengesWithCurrentMethods';
 import { PartnerWithUsPage } from './pages/PartnerWithUs';
 import { ImpactPage } from './pages/Impact';
@@ -32,6 +33,7 @@ export function App() {
           <Route path="/biodiversity" element={<BiodiversityLossPage />} />
           <Route path="/economic-impact" element={<EconomicImpactPage />} />
           <Route path="/environmental-damage" element={<EnvironmentalDamagePage />} />
+          <Route path="/sar-technology" element={<Sentinel1SarDataPage />} />
           <Route path="/challenges" element={<ChallengesWithCurrentMethodsPage />} />
           <Route path="/partner" element={<PartnerWithUsPage />} />
           <Route path="/impact" element={<ImpactPage />} />

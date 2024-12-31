@@ -38,7 +38,7 @@ export function ChatWindow({ onClose }: ChatWindowProps) {
     <div className="bg-deep-900 rounded-lg overflow-hidden border border-aqua/20">
       {/* Header */}
       <div className="bg-gradient-to-r from-marine to-purple p-4 flex items-center justify-between relative overflow-hidden sticky top-0 z-10">
-        <div className="absolute inset-0 bg-gradient-shine opacity-30 animate-slide-right" />
+        <div className="absolute bg-gradient-shine opacity-30 animate-slide-right" />
         <div className="flex items-center gap-3">
           <div className="relative">
             <div className="w-3 h-3 rounded-full bg-aqua animate-ping absolute" />

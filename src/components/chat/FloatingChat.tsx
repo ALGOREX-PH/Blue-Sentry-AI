@@ -10,7 +10,7 @@ export function FloatingChat() {
   return (
     <div className="fixed bottom-6 right-6 z-50">
       {isOpen ? (
-        <div className="absolute bottom-0 right-0 w-96 rounded-lg shadow-2xl animate-in slide-in-from-bottom-5">
+        <div className="fixed inset-x-4 bottom-20 md:inset-auto md:bottom-0 md:right-0 md:w-96 rounded-lg shadow-2xl animate-in slide-in-from-bottom-5">
           <ChatWindow onClose={() => setIsOpen(false)} />
         </div>
       ) : (

@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { GoogleGenerativeAI } from '@google/generative-ai';
 
-const genAI = new GoogleGenerativeAI(import.meta.env.VITE_GEMINI_API_KEY);
+const genAI = new GoogleGenerativeAI("AIzaSyBQ7AHGAho_F0toPhNttjzEaop4iHIZ1UI");
 
 interface Message {
   role: 'user' | 'assistant';

@@ -17,10 +17,12 @@ export function Hero() {
           </p>
 
           <div className="flex flex-col md:flex-row gap-4 justify-center mb-20">
+            <Link to = "/explore-technology">
             <Button>
               <Search className="w-5 h-5" />
               Explore Our Technology
             </Button>
+            </Link>
             <Button variant="secondary" to="/demo">
               <Play className="w-5 h-5" />
               See It in Action

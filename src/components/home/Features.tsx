@@ -72,7 +72,7 @@ export function Features() {
           </div>
 
           <div className="mt-12 text-center">
-            <Button className="mx-auto">
+            <Button className="mx-auto" to="/explore-technology">
               Learn More About Our Technology
             </Button>
           </div>

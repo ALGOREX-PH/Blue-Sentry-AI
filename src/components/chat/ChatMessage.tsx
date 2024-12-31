@@ -33,7 +33,7 @@ export function ChatMessage({ message }: ChatMessageProps) {
         hover:border-opacity-30
       `}>
         <div className="absolute inset-0 bg-gradient-shine opacity-0 group-hover:opacity-20 transition-opacity duration-500" />
-        <p className="text-sm text-white">{message.content}</p>
+        <p className="text-xs md:text-sm text-white break-words">{message.content}</p>
       </div>
     </div>
   );

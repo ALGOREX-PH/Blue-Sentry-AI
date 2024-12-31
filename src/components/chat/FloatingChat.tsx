@@ -23,16 +23,17 @@ export function FloatingChat() {
             className="rounded-full w-16 h-16 p-0 shadow-glow bg-gradient-to-r from-marine to-purple hover:scale-110 transition-all duration-300 relative overflow-hidden group"
           >
             <div className="absolute inset-0 bg-gradient-shine opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
-            <div className="relative z-10 flex items-center justify-center">
-              <MessageCircle className="w-7 h-7 text-aqua" />
-              <div className="absolute inset-0 flex items-center justify-center">
-                <div className="w-full h-full animate-spin-slow opacity-20">
-                  <Waves className="absolute top-0 left-1/2 -translate-x-1/2 w-4 h-4 text-aqua" />
-                  <Shield className="absolute bottom-0 left-1/2 -translate-x-1/2 w-4 h-4 text-aqua" />
-                  <Satellite className="absolute left-0 top-1/2 -translate-y-1/2 w-4 h-4 text-aqua" />
-                </div>
-              </div>
-            </div>
+           <div className="absolute inset-0 flex items-center justify-center">
+             <div className="w-14 h-14 animate-spin-slow opacity-20">
+               <Waves className="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2 w-4 h-4 text-aqua" />
+               <Shield className="absolute bottom-0 left-1/2 -translate-x-1/2 translate-y-1/2 w-4 h-4 text-aqua" />
+               <Satellite className="absolute left-0 top-1/2 -translate-x-1/2 -translate-y-1/2 w-4 h-4 text-aqua" />
+               <Satellite className="absolute right-0 top-1/2 translate-x-1/2 -translate-y-1/2 w-4 h-4 text-aqua transform rotate-90" />
+             </div>
+           </div>
+           <div className="relative z-10 flex items-center justify-center w-full h-full">
+             <MessageCircle className="w-7 h-7 text-aqua" />
+          </div>
           </Button>
           
           {isHovered && (

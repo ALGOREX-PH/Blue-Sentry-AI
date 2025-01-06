@@ -18,9 +18,10 @@ import { PartnerWithUsPage } from './pages/PartnerWithUs';
 import { ImpactPage } from './pages/Impact';
 import { SeeItInActionPage } from './pages/SeeItInAction';
 import { RapidResponsePage } from './pages/RapidResponse';
-import { ActionableInsightsPage } from './pages/ActionableInsights'
+import { ActionableInsightsPage } from './pages/ActionableInsights';
 import { RealTimeDetectionPage } from './pages/RealTimeDetection';
 import { ImpactAssessmentPage } from './pages/ImpactAssessment';
+import { JoinMissionPage } from './pages/JoinMission';
 
 export function App() {
   return (
@@ -49,6 +50,7 @@ export function App() {
           <Route path="/actionable-insights" element={<ActionableInsightsPage />} />
           <Route path="/real-time-detection" element={<RealTimeDetectionPage />} />
           <Route path="/impact-assessment" element={<ImpactAssessmentPage />} />
+          <Route path="/join-mission" element={<JoinMissionPage />} />
         </Routes>
       </div>
     </Router>

@@ -20,6 +20,7 @@ import { SeeItInActionPage } from './pages/SeeItInAction';
 import { RapidResponsePage } from './pages/RapidResponse';
 import { ActionableInsightsPage } from './pages/ActionableInsights'
 import { RealTimeDetectionPage } from './pages/RealTimeDetection';
+import { ImpactAssessmentPage } from './pages/ImpactAssessment';
 
 export function App() {
   return (
@@ -46,7 +47,8 @@ export function App() {
           <Route path="/demo" element={<SeeItInActionPage />} />
           <Route path="/rapid-response" element={<RapidResponsePage />} />
           <Route path="/actionable-insights" element={<ActionableInsightsPage />} />
-<Route path="/real-time-detection" element={<RealTimeDetectionPage />} />
+          <Route path="/real-time-detection" element={<RealTimeDetectionPage />} />
+          <Route path="/impact-assessment" element={<ImpactAssessmentPage />} />
         </Routes>
       </div>
     </Router>

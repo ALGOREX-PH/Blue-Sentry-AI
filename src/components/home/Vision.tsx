@@ -2,6 +2,7 @@ import React from 'react';
 import { Sunrise, ArrowRight } from 'lucide-react';
 import { Button } from '../ui/Button';
 import { Card } from '../ui/Card';
+import { Link } from 'react-router-dom';
 
 export function Vision() {
   return (
@@ -41,10 +42,12 @@ export function Vision() {
               </div>
 
               <div className="flex flex-col md:flex-row items-center justify-center gap-6">
+                <Link to="/join-mission">
                 <Button>
                   Join Our Mission
                   <ArrowRight className="w-5 h-5" />
                 </Button>
+                </Link>
                 <Button variant="secondary">
                   Learn More
                   <ArrowRight className="w-5 h-5" />

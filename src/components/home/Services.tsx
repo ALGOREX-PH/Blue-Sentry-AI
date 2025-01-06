@@ -1,6 +1,7 @@
 import React from 'react';
 import { AlertTriangle, Activity, CheckCircle } from 'lucide-react';
 import { Card } from '../ui/Card';
+import { Link } from 'react-router-dom';
 
 interface ServiceCardProps {
   icon: React.ReactNode;
@@ -38,12 +39,14 @@ export function Services() {
           </div>
 
           <div className="grid md:grid-cols-2 gap-8 mb-16">
+            <Link to = "/real-time-detection">
             <ServiceCard
               icon={<AlertTriangle className="w-12 h-12" />}
               title="Real-Time Oil Spill Detection"
               description="Identify and respond to oil spills within minutes, minimizing damage to ecosystems and reducing cleanup costs."
               progress={85}
             />
+            </Link>
             <ServiceCard
               icon={<Activity className="w-12 h-12" />}
               title="Impact Assessment Tools"

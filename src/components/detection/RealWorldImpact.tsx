@@ -14,7 +14,7 @@ export function RealWorldImpact() {
           <Card className="mb-12 overflow-hidden">
             <div className="aspect-video relative">
               <img 
-                src="https://images.unsplash.com/photo-1584017911766-d451b3d0e843?auto=format&fit=crop&w=1920&q=80"
+                src="https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&w=1920&q=80"
                 alt="Live detection dashboard"
                 className="w-full h-full object-cover"
               />

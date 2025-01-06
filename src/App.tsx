@@ -18,6 +18,7 @@ import { PartnerWithUsPage } from './pages/PartnerWithUs';
 import { ImpactPage } from './pages/Impact';
 import { SeeItInActionPage } from './pages/SeeItInAction';
 import { RapidResponsePage } from './pages/RapidResponse';
+import { ActionableInsightsPage } from './pages/ActionableInsights'
 
 export function App() {
   return (
@@ -43,6 +44,7 @@ export function App() {
           <Route path="/impact" element={<ImpactPage />} />
           <Route path="/demo" element={<SeeItInActionPage />} />
           <Route path="/rapid-response" element={<RapidResponsePage />} />
+          <Route path="/actionable-insights" element={<ActionableInsightsPage />} />
         </Routes>
       </div>
     </Router>

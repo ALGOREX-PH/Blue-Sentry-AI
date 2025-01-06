@@ -1,5 +1,4 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
 import { Search, Play, Handshake } from 'lucide-react';
 import { Button } from '../ui/Button';
 import { Counter } from '../Counter';
@@ -7,27 +6,37 @@ import { Counter } from '../Counter';
 export function Hero() {
   return (
     <section className="relative min-h-screen pt-32 pb-20">
+      {/* Dynamic Background Elements */}
+      <div className="absolute inset-0 bg-deep-900">
+        <div className="absolute inset-0 bg-gradient-to-b from-marine/20 via-purple/10 to-deep-900/80" />
+        <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&w=1920&q=80')] bg-cover bg-center opacity-10" />
+        <div className="absolute inset-0 bg-gradient-radial from-aqua/5 via-transparent to-transparent opacity-30" />
+        
+        {/* Animated Circles */}
+        <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-marine rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse" />
+        <div className="absolute top-1/3 right-1/3 w-96 h-96 bg-purple rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse delay-100" />
+        <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-aqua rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse delay-200" />
+      </div>
+
       <div className="container mx-auto px-4 relative z-10">
         <div className="text-center max-w-4xl mx-auto">
           <h1 className="text-4xl md:text-6xl font-bold text-aqua mb-6 text-glow">
             Empowering Humanity to Protect Our Oceans
           </h1>
-          <p className="text-xl md:text-2xl text-blue-200 mb-12">
+          <p className="text-xl md:text-2xl text-gray-200 mb-12">
             Advanced AI-powered solutions for real-time oil spill detection and marine ecosystem protection
           </p>
 
           <div className="flex flex-col md:flex-row gap-4 justify-center mb-20">
-            <Link to = "/explore-technology">
             <Button>
               <Search className="w-5 h-5" />
               Explore Our Technology
             </Button>
-            </Link>
-            <Button variant="secondary" to="/demo">
+            <Button variant="secondary">
               <Play className="w-5 h-5" />
               See It in Action
             </Button>
-            <Button variant="secondary" to="/partner">
+            <Button variant="secondary">
               <Handshake className="w-5 h-5" />
               Partner with Us
             </Button>
@@ -52,7 +61,6 @@ export function Hero() {
           </div>
         </div>
       </div>
-      <div className="absolute inset-0 bg-gradient-shine mix-blend-overlay -z-0" />
     </section>
   );
 }

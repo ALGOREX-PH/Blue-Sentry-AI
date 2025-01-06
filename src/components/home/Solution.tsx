@@ -43,11 +43,13 @@ export function Solution() {
               description="Cutting-edge AI for accurate oil detection"
             />
             </Link>
+            <Link to="/actionable-insights">
             <SolutionCard
               icon={<Bell className="w-12 h-12" />}
               title="Actionable Insights"
               description="Real-time data and analytics for informed decision-making"
             />
+            </Link>
           </div>
 
           <Card className="p-8">

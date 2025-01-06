@@ -4,10 +4,11 @@ import { Button } from '../ui/Button';
 export function MissionHero() {
   return (
     <section className="relative min-h-[80vh] flex items-center pt-20">
+      
       <div 
         className="absolute inset-0 bg-cover bg-center -z-10"
         style={{
-          backgroundImage: 'url(https://images.unsplash.com/photo-1498092651296-641e88c3b057?auto=format&fit=crop&w=2000&q=80)',
+          backgroundImage: 'url(https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&w=1920&q=80)',
           backgroundBlendMode: 'overlay',
         }}
       >

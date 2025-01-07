@@ -14,6 +14,7 @@ export function MobileNav({ isOpen, onNavigate, isActive }: MobileNavProps) {
     { path: '/solution', label: 'Solution' },
     { path: '/services', label: 'Services' },
     { path: '/impact', label: 'Impact' },
+    { path: '/about', label: 'About' },
   ];
 
   if (!isOpen) return null;

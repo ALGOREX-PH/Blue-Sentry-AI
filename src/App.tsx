@@ -25,6 +25,7 @@ import { JoinMissionPage } from './pages/JoinMission';
 import { VisionPage } from './pages/Vision';
 import { InnovationPage } from './pages/Innovation';
 import { SustainabilityPage } from './pages/Sustainability';
+import { CommunityPage } from './pages/Community';
 
 export function App() {
   return (
@@ -57,6 +58,7 @@ export function App() {
           <Route path="/vision" element={<VisionPage />} />
           <Route path="/innovation" element={<InnovationPage />} />
           <Route path="/sustainability" element={<SustainabilityPage />} />
+          <Route path="/community" element={<CommunityPage />} />
         </Routes>
       </div>
     </Router>

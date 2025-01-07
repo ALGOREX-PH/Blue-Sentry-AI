@@ -3,7 +3,11 @@ import { Upload, Image as ImageIcon, AlertTriangle } from 'lucide-react';
 import { Button } from '../ui/Button';
 import { Card } from '../ui/Card';
 
-export function ImageUpload() {
+interface ImageUploadProps {
+  onImageSelect: (imageUrl: string) => void;
+}
+
+export function ImageUpload({ onImageSelect }: ImageUploadProps) {
   const [selectedImage, setSelectedImage] = useState<string | null>(null);
   const fileInputRef = useRef<HTMLInputElement>(null);
 
@@ -13,6 +17,7 @@ export function ImageUpload() {
       const reader = new FileReader();
       reader.onload = (e) => {
         setSelectedImage(e.target?.result as string);
+        onImageSelect(e.target?.result as string);
       };
       reader.readAsDataURL(file);
     }

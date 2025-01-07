@@ -23,6 +23,7 @@ import { RealTimeDetectionPage } from './pages/RealTimeDetection';
 import { ImpactAssessmentPage } from './pages/ImpactAssessment';
 import { JoinMissionPage } from './pages/JoinMission';
 import { VisionPage } from './pages/Vision';
+import { InnovationPage } from './pages/Innovation';
 
 export function App() {
   return (
@@ -53,6 +54,7 @@ export function App() {
           <Route path="/impact-assessment" element={<ImpactAssessmentPage />} />
           <Route path="/join-mission" element={<JoinMissionPage />} />
           <Route path="/vision" element={<VisionPage />} />
+          <Route path="/innovation" element={<InnovationPage />} />
         </Routes>
       </div>
     </Router>

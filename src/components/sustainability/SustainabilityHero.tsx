@@ -13,7 +13,9 @@ export function SustainabilityHero() {
           <p className="text-xl text-blue-200 mb-8">
             Protecting marine life today ensures the survival of our ecosystems tomorrow
           </p>
+          <div className="flex flex-wrap justify-center gap-4">
           <Button>Learn More</Button>
+          </div>
         </div>
       </div>
     </section>

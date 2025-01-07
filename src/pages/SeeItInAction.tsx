@@ -6,6 +6,10 @@ import { HeatmapVisualization } from '../components/demo/HeatmapVisualization';
 import { BeforeAfter } from '../components/demo/BeforeAfter';
 import { CaseStudies } from '../components/demo/CaseStudies';
 import { DemoCTA } from '../components/demo/DemoCTA';
+import { ImageUpload } from '../components/demo/ImageUpload';
+import { AnalysisProcess } from '../components/demo/AnalysisProcess';
+import { DetectionResults } from '../components/demo/DetectionResults';
+import { DemoCases } from '../components/demo/DemoCases';
 
 export function SeeItInActionPage() {
   return (
@@ -15,6 +19,10 @@ export function SeeItInActionPage() {
       <HeatmapVisualization />
       <BeforeAfter />
       <CaseStudies />
+      <ImageUpload />
+      <AnalysisProcess />
+      <DetectionResults />
+      <DemoCases />
       <DemoCTA />
     </Layout>
   );

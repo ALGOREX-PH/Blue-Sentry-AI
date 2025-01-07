@@ -44,6 +44,7 @@ export function Navbar() {
           <NavLink to="/solution" isActive={isActive('/solution')}>Solution</NavLink>
           <NavLink to="/services" isActive={isActive('/services')}>Services</NavLink>
           <NavLink to="/impact" isActive={isActive('/impact')}>Impact</NavLink>
+          <NavLink to="/about" isActive={isActive('/about')}>About</NavLink>
         </div>
 
         <MobileNavButton 

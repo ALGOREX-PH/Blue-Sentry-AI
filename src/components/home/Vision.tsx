@@ -59,18 +59,24 @@ export function Vision() {
           </Card>
 
           <div className="grid md:grid-cols-3 gap-8">
+            <Link to="/innovation">
             <Card className="text-center hover:bg-purple/10">
               <h3 className="text-lg font-semibold mb-3 text-aqua">Innovation</h3>
               <p className="text-blue-200">Pioneering AI technology for ocean protection</p>
             </Card>
+            </Link>
+            <Link to="/sustainability">
             <Card className="text-center hover:bg-purple/10">
               <h3 className="text-lg font-semibold mb-3 text-aqua">Sustainability</h3>
               <p className="text-blue-200">Creating lasting positive impact on marine ecosystems</p>
             </Card>
+            </Link>
+            <Link to="/community">
             <Card className="text-center hover:bg-purple/10">
               <h3 className="text-lg font-semibold mb-3 text-aqua">Community</h3>
               <p className="text-blue-200">Empowering global collaboration for ocean conservation</p>
             </Card>
+            </Link>
           </div>
         </div>
       </div>

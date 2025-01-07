@@ -20,7 +20,9 @@ export function JoinMissionHero() {
           <p className="text-xl text-blue-200 mb-8">
             Join our mission to safeguard the blue heart of our planet through innovative AI technology and collective action.
           </p>
+          <div className="flex flex-wrap justify-center gap-4">
           <Button>Join the Mission</Button>
+          </div>
         </div>
       </div>
     </section>

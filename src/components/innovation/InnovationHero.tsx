@@ -13,7 +13,9 @@ export function InnovationHero() {
           <p className="text-xl text-blue-200 mb-8">
             Where Innovation Meets Conservation - Pioneering the future of marine protection with cutting-edge AI technology
           </p>
+          <div className="flex flex-wrap justify-center gap-4">
           <Button>Explore Our Innovations</Button>
+          </div>
         </div>
       </div>
     </section>

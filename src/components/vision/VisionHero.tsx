@@ -13,7 +13,9 @@ export function VisionHero() {
           <p className="text-xl text-blue-200 mb-8">
             Driven by Innovation and Unity
           </p>
+          <div className="flex flex-wrap justify-center gap-4">
           <Button>Explore Our Vision</Button>
+          </div>
         </div>
       </div>
     </section>

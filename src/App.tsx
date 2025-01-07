@@ -24,6 +24,7 @@ import { ImpactAssessmentPage } from './pages/ImpactAssessment';
 import { JoinMissionPage } from './pages/JoinMission';
 import { VisionPage } from './pages/Vision';
 import { InnovationPage } from './pages/Innovation';
+import { SustainabilityPage } from './pages/Sustainability';
 
 export function App() {
   return (
@@ -55,6 +56,7 @@ export function App() {
           <Route path="/join-mission" element={<JoinMissionPage />} />
           <Route path="/vision" element={<VisionPage />} />
           <Route path="/innovation" element={<InnovationPage />} />
+          <Route path="/sustainability" element={<SustainabilityPage />} />
         </Routes>
       </div>
     </Router>

@@ -23,9 +23,14 @@ import { RealTimeDetectionPage } from './pages/RealTimeDetection';
 import { ImpactAssessmentPage } from './pages/ImpactAssessment';
 import { JoinMissionPage } from './pages/JoinMission';
 import { VisionPage } from './pages/Vision';
+import { AboutPage } from './pages/About';
+import { InnovationImpactPage } from './pages/InnovationImpact';
 import { InnovationPage } from './pages/Innovation';
 import { SustainabilityPage } from './pages/Sustainability';
 import { CommunityPage } from './pages/Community';
+import { TransparencyPage } from './pages/Transparency';
+import { EducationPage } from './pages/Education';
+import { GlobalCollaborationPage } from './pages/GlobalCollaboration';
 
 export function App() {
   return (
@@ -56,9 +61,14 @@ export function App() {
           <Route path="/impact-assessment" element={<ImpactAssessmentPage />} />
           <Route path="/join-mission" element={<JoinMissionPage />} />
           <Route path="/vision" element={<VisionPage />} />
+          <Route path="/about" element={<AboutPage />} />
+          <Route path="/innovation-impact" element={<InnovationImpactPage />} />
           <Route path="/innovation" element={<InnovationPage />} />
           <Route path="/sustainability" element={<SustainabilityPage />} />
           <Route path="/community" element={<CommunityPage />} />
+          <Route path="/transparency" element={<TransparencyPage />} />
+          <Route path="/education" element={<EducationPage />} />
+          <Route path="/global-collaboration" element={<GlobalCollaborationPage />} />
         </Routes>
       </div>
     </Router>

@@ -1,4 +1,5 @@
 import React from 'react';
+import { useState } from 'react';
 import { Layout } from '../components/layout/Layout';
 import { DemoHero } from '../components/demo/DemoHero';
 import { LiveDashboard } from '../components/demo/LiveDashboard';
@@ -12,6 +13,8 @@ import { DetectionResults } from '../components/demo/DetectionResults';
 import { DemoCases } from '../components/demo/DemoCases';
 
 export function SeeItInActionPage() {
+  const [selectedImage, setSelectedImage] = useState<string | null>(null);
+
   return (
     <Layout>
       <DemoHero />
@@ -19,9 +22,9 @@ export function SeeItInActionPage() {
       <HeatmapVisualization />
       <BeforeAfter />
       <CaseStudies />
-      <ImageUpload />
+      <ImageUpload onImageSelect={setSelectedImage} />
       <AnalysisProcess />
-      <DetectionResults />
+      <DetectionResults originalImage={selectedImage} />
       <DemoCases />
       <DemoCTA />
     </Layout>

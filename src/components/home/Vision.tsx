@@ -48,10 +48,12 @@ export function Vision() {
                   <ArrowRight className="w-5 h-5" />
                 </Button>
                 </Link>
+                <Link to="/vision">
                 <Button variant="secondary">
                   Learn More
                   <ArrowRight className="w-5 h-5" />
                 </Button>
+                </Link>
               </div>
             </div>
           </Card>

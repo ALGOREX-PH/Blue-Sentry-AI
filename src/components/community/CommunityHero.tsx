@@ -13,7 +13,9 @@ export function CommunityHero() {
           <p className="text-xl text-blue-200 mb-8">
             Building a global community dedicated to marine conservation through innovation, collaboration, and community empowerment.
           </p>
+          <div className="flex flex-wrap justify-center gap-4">
           <Button>Join Our Community</Button>
+          </div>
         </div>
       </div>
     </section>

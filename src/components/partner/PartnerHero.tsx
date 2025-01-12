@@ -13,7 +13,9 @@ export function PartnerHero() {
           <p className="text-xl text-blue-200 mb-8">
             At Blue Sentry AI, we believe safeguarding the world's oceans requires collective effort. By harnessing the power of AI and satellite technology, we empower organizations globally to detect, prevent, and mitigate oil spills in real-time.
           </p>
+          <div className="flex flex-wrap justify-center gap-4">
           <Button>Let's Lead the Change – Become a Partner Today</Button>
+          </div>
         </div>
       </div>
     </section>

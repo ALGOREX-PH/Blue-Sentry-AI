@@ -47,11 +47,13 @@ export function Services() {
               progress={85}
             />
             </Link>
+            <Link to = "/impact-assessment">
             <ServiceCard
               icon={<Activity className="w-12 h-12" />}
               title="Impact Assessment Tools"
               description="Understand the ecological and economic risks with advanced mapping and predictive tools tailored to your needs."
             />
+            </Link>
           </div>
 
           <Card className="p-8">

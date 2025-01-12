@@ -16,7 +16,9 @@ export function EconomicHero() {
           <p className="text-xl text-blue-200 mb-8">
             Turning Environmental Catastrophes into Economic Recovery and Resilience
           </p>
+          <div className="flex flex-wrap justify-center gap-4">
           <Button>Learn More</Button>
+          </div>
           
           <div className="mt-12 relative h-64 md:h-96 rounded-lg overflow-hidden">
             <img

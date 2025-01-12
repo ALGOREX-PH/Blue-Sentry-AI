@@ -2,6 +2,7 @@ import React from 'react';
 import { Search, Play, Handshake } from 'lucide-react';
 import { Button } from '../ui/Button';
 import { Counter } from '../Counter';
+import { Link } from 'react-router-dom';
 
 export function Hero() {
   return (
@@ -23,18 +24,24 @@ export function Hero() {
           </p>
 
           <div className="flex flex-col md:flex-row gap-6 justify-center mb-24">
+            <Link to= "/explore-technology">
             <Button className="group hover:scale-105 transition-transform">
               <Search className="w-5 h-5" />
               Explore Our Technology
             </Button>
+            </Link>
+            <Link to="/demo">
             <Button variant="secondary" className="group hover:scale-105 transition-transform">
               <Play className="w-5 h-5" />
               See It in Action
             </Button>
+            </Link>
+            <Link to="/partner">
             <Button variant="secondary" className="group hover:scale-105 transition-transform">
               <Handshake className="w-5 h-5" />
               Partner with Us
             </Button>
+            </Link>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl mx-auto">

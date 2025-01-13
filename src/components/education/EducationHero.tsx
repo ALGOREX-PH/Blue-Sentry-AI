@@ -17,7 +17,9 @@ export function EducationHero() {
           <p className="text-xl text-blue-200 mb-8">
             Education drives lasting environmental change. At Blue Sentry AI, we provide the tools and insights needed to safeguard our oceans and inspire future leaders in conservation.
           </p>
+          <div className="flex flex-wrap justify-center gap-4">
           <Button>Explore Our Programs</Button>
+          </div>
         </div>
       </div>
     </section>

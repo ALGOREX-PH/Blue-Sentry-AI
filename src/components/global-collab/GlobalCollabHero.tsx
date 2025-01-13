@@ -13,7 +13,9 @@ export function GlobalCollabHero() {
           <p className="text-xl text-blue-200 mb-8">
             The oceans belong to all of us, but no single entity can protect them alone. At Blue Sentry AI, we firmly believe that by working together—across industries, nations, and communities—we can achieve transformative results that ensure the preservation of marine ecosystems.
           </p>
+          <div className="flex flex-wrap justify-center gap-4">
           <Button>Join Our Global Network</Button>
+          </div>
         </div>
       </div>
     </section>

@@ -17,7 +17,9 @@ export function InnovationImpactHero() {
           <p className="text-xl text-blue-200 mb-8">
             At Blue Sentry AI, innovation isn't simply about staying ahead—it's about using technology as a force for good. Through advanced AI and satellite solutions, we protect the fragile ecosystems that form the lifeblood of our planet's oceans.
           </p>
+          <div className="flex flex-wrap justify-center gap-4">
           <Button>Explore Our Innovations</Button>
+          </div>
         </div>
       </div>
     </section>

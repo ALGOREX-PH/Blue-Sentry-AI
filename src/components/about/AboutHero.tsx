@@ -8,7 +8,7 @@ export function AboutHero() {
         <div className="max-w-4xl mx-auto text-center">
           <div className="w-64 h-64 mx-auto mb-8 rounded-full overflow-hidden border-4 border-aqua/20 shadow-glow relative group">
             <img
-              src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=300&h=300&q=80"
+              src="./Meer.jpg"
               alt="Danielle Bagaforo Meer"
               className="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-500"
             />

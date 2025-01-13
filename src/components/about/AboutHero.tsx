@@ -8,7 +8,7 @@ export function AboutHero() {
         <div className="max-w-4xl mx-auto text-center">
           <div className="w-64 h-64 mx-auto mb-8 rounded-full overflow-hidden border-4 border-aqua/20 shadow-glow relative group">
             <img
-              src="./Meer.jpg"
+              src="https://raw.githubusercontent.com/ALGOREX-PH/Blue-Sentry-AI/refs/heads/main/src/components/about/Meer.jpg"
               alt="Danielle Bagaforo Meer"
               className="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-500"
             />

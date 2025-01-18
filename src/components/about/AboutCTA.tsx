@@ -17,18 +17,24 @@ export function AboutCTA() {
             <Mail className="w-5 h-5 mr-2" />
             Email
           </Button>
+          <a href = "https://www.linkedin.com/in/algorexph/">
           <Button variant="secondary" className="min-w-[160px] hover:scale-105 transition-transform">
             <Linkedin className="w-5 h-5 mr-2" />
             LinkedIn
           </Button>
+          </a>
+          <a href = "https://github.com/ALGOREX-PH">
           <Button variant="secondary" className="min-w-[160px] hover:scale-105 transition-transform">
             <Github className="w-5 h-5 mr-2" />
             GitHub
           </Button>
+          </a>
+          <a href = "https://www.facebook.com/debbie.meer/">
           <Button variant="secondary" className="min-w-[160px] hover:scale-105 transition-transform">
             <Facebook className="w-5 h-5 mr-2" />
             Facebook
           </Button>
+          </a>
         </div>
         <div className="mt-12 text-blue-200/60">
           Available for speaking engagements and consultations

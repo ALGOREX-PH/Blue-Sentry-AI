@@ -1,5 +1,7 @@
 import React from 'react';
 import { Shield, Mail, Phone, MapPin } from 'lucide-react';
+import { Link } from 'react-router-dom';
+
 
 export function Footer() {
   return (
@@ -35,10 +37,18 @@ export function Footer() {
           <div>
             <h3 className="text-lg font-semibold mb-4">Quick Links</h3>
             <ul className="space-y-2">
+              <Link to = "/mission">
               <li><a href="#mission" className="hover:text-blue-400">Our Mission</a></li>
+              </Link>
+              <Link to = "/solution">
               <li><a href="#solution" className="hover:text-blue-400">Solution</a></li>
+              </Link>
+              <Link to = "/services">
               <li><a href="#services" className="hover:text-blue-400">Services</a></li>
+              </Link>
+              <Link to = "/impact">
               <li><a href="#impact" className="hover:text-blue-400">Impact</a></li>
+              </Link>
             </ul>
           </div>
           <div>

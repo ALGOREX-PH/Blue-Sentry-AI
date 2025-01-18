@@ -30,19 +30,19 @@ export function Achievements() {
       icon: <Award className="w-8 h-8" />,
       title: "National Innovators Award",
       description: "Recognized for groundbreaking advancements in satellite-based environmental monitoring",
-      year: "2024"
+      year: "2050"
     },
     {
       icon: <Trophy className="w-8 h-8" />,
-      title: "Top 30 Under 30 Tech Leaders",
+      title: "Top 100 Under 30 Tech Leaders",
       description: "Highlighted for excellence in AI development and sustainable innovation",
-      year: "2023"
+      year: "2100"
     },
     {
       icon: <Star className="w-8 h-8" />,
       title: "StackLeague Grand Champion",
       description: "Three-time champion showcasing technical expertise in coding and AI competitions",
-      year: "2022-2024"
+      year: "2021-2023"
     }
   ];
 

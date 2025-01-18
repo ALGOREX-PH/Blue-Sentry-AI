@@ -2,27 +2,33 @@ import React from 'react';
 import { Droplet, BarChart2, Settings, FileText } from 'lucide-react';
 import { ServiceCard } from './ServiceCard';
 
+
+
 export function CoreServices() {
   const services = [
     {
       icon: <Droplet className="w-12 h-12" />,
       title: "Real-Time Oil Spill Detection",
-      description: "State-of-the-art AI-driven models continuously scan satellite and aerial imagery to detect oil spills as they emerge."
+      description: "State-of-the-art AI-driven models continuously scan satellite and aerial imagery to detect oil spills as they emerge.",
+      link : "/real-time-detection"
     },
     {
       icon: <BarChart2 className="w-12 h-12" />,
       title: "Impact Assessment Tools",
-      description: "Comprehensive analytics for understanding environmental impact and planning mitigation strategies."
+      description: "Comprehensive analytics for understanding environmental impact and planning mitigation strategies.", 
+      link : "/impact-assessment"
     },
     {
       icon: <Settings className="w-12 h-12" />,
       title: "Customized Monitoring",
-      description: "Bespoke monitoring platforms tailored to your specific operational needs."
+      description: "Bespoke monitoring platforms tailored to your specific operational needs.",
+      link : "/actionable-insights"
     },
     {
       icon: <FileText className="w-12 h-12" />,
       title: "Sustainability Reporting",
-      description: "Automated documentation and reporting for environmental compliance."
+      description: "Automated documentation and reporting for environmental compliance.",
+      link : "/sustainability"
     }
   ];
 

@@ -1,8 +1,10 @@
-import React, { useState, useRef } from 'react';
+import React, { useState, useRef, useEffect } from 'react';
 import { Upload } from 'lucide-react';
 import { Button } from '../../ui/Button';
 import { UploadZone } from './UploadZone';
 import { AnalysisResults } from './AnalysisResults';
+import { preprocessImage, loadModel } from '../../../utils/imageProcessing';
+import * as tf from '@tensorflow/tfjs';
 
 export function ImageUpload() {
   const [selectedImage, setSelectedImage] = useState<string | null>(null);
@@ -12,32 +14,67 @@ export function ImageUpload() {
     confidence: number;
     area: number;
   } | null>(null);
+  const [model, setModel] = useState<tf.LayersModel | null>(null);
+
+  useEffect(() => {
+    const initModel = async () => {
+      try {
+        const loadedModel = await loadModel();
+        setModel(loadedModel);
+      } catch (error) {
+        console.error('Failed to load model:', error);
+      }
+    };
+    initModel();
+  }, []);
   
   const fileInputRef = useRef<HTMLInputElement>(null);
 
-  const handleImageUpload = (event: React.ChangeEvent<HTMLInputElement>) => {
+  const handleImageUpload = async (event: React.ChangeEvent<HTMLInputElement>) => {
     const file = event.target.files?.[0];
     if (file) {
       const reader = new FileReader();
-      reader.onload = (e) => {
-        setSelectedImage(e.target?.result as string);
-        analyzeImage();
+      reader.onload = async (e) => {
+        const imageUrl = e.target?.result as string;
+        setSelectedImage(imageUrl);
+        await analyzeImage(imageUrl);
       };
       reader.readAsDataURL(file);
     }
   };
 
-  const analyzeImage = () => {
+  const analyzeImage = async (imageUrl: string) => {
     setIsAnalyzing(true);
-    // Simulate CNN analysis
-    setTimeout(() => {
-      setAnalysisResults({
-        status: 'Oil Spill Detected',
-        confidence: 98.5,
-        area: 2.7
+    try {
+      // Ensure model is loaded
+      const activeModel = model || await loadModel();
+      setModel(activeModel);
+
+      // Use tf.tidy to automatically clean up tensors
+      const result = await tf.tidy(async () => {
+        const processedImage = await preprocessImage(imageUrl);
+        const prediction = activeModel.predict(processedImage) as tf.Tensor;
+        const probability = await prediction.data();
+        return Math.round(probability[0]); // Round to 0 or 1
       });
+
+      // Set results
+      const area = calculateSpillArea(result);
+      setAnalysisResults({
+        status: result === 1 ? 'Oil Spill Detected' : 'No Oil Spill Detected',
+        confidence: result === 1 ? 100 : 0,
+        area: area
+      });
+    } catch (error) {
+      console.error('Error analyzing image:', error);
+      setAnalysisResults({
+        status: 'Analysis Failed',
+        confidence: 0,
+        area: 0
+      });
+    } finally {
       setIsAnalyzing(false);
-    }, 2000);
+    }
   };
 
   const clearImage = () => {

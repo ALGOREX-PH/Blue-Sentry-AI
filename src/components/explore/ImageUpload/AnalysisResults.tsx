@@ -68,18 +68,34 @@ export function AnalysisResults({ isAnalyzing, results }: AnalysisResultsProps) 
             <div>
               <div className="flex items-center justify-between mb-3">
                 <span className="text-lg text-blue-200 flex items-center gap-2">
-                  <CheckCircle2 className="w-6 h-6 text-green-400" />
+                  {results.confidence === 100 ? (
+                    <AlertTriangle className="w-6 h-6 text-red-400 animate-pulse" />
+                  ) : (
+                    <CheckCircle2 className="w-6 h-6 text-green-400" />
+                  )}
                   Status
                 </span>
-                <span className="text-lg text-green-400 font-semibold">{results.status}</span>
+                <span className={`text-lg font-semibold ${results.confidence === 100 ? 'text-red-400' : 'text-green-400'} flex items-center gap-2`}>
+                  {results.status}
+                  {results.confidence === 100 && (
+                    <div className="w-2 h-2 rounded-full bg-red-400 animate-ping" />
+                  )}
+                </span>
               </div>
-              <div className="h-3 bg-deep-900 rounded-full overflow-hidden">
+              <div className="h-3 bg-deep-900 rounded-full overflow-hidden relative">
                 <div 
-                  className="h-full bg-gradient-to-r from-aqua via-blue-400 to-purple animate-slide-right relative"
-                  style={{ width: '100%' }}
+                  className={`h-full relative transition-all duration-1000 ease-out ${
+                    results.confidence === 100 
+                      ? 'bg-gradient-to-r from-red-500 via-red-400 to-red-500 animate-pulse' 
+                      : 'bg-gradient-to-r from-green-500 via-green-400 to-green-500'
+                  }`}
+                  style={{ width: results.confidence === 100 ? '100%' : '0%' }}
                 >
                   <div className="absolute inset-0 bg-gradient-shine animate-slide-right" style={{ animationDelay: '0.5s' }} />
                 </div>
+                {results.confidence === 100 && (
+                  <div className="absolute inset-0 bg-red-500/20 animate-pulse" />
+                )}
               </div>
             </div>
 
@@ -87,11 +103,17 @@ export function AnalysisResults({ isAnalyzing, results }: AnalysisResultsProps) 
             <div>
               <div className="flex items-center justify-between mb-3">
                 <span className="text-lg text-blue-200">Confidence Score</span>
-                <span className="text-lg text-aqua font-semibold">{results.confidence}%</span>
+                <span className={`text-lg font-semibold ${
+                  results.confidence === 100 ? 'text-red-400' : 'text-green-400'
+                }`}>{results.confidence}%</span>
               </div>
               <div className="h-3 bg-deep-900 rounded-full overflow-hidden">
                 <div 
-                  className="h-full bg-gradient-to-r from-aqua to-blue-400 transition-all duration-1000 ease-out relative"
+                  className={`h-full transition-all duration-1000 ease-out relative ${
+                    results.confidence === 100
+                      ? 'bg-gradient-to-r from-red-500 to-red-400'
+                      : 'bg-gradient-to-r from-green-500 to-green-400'
+                  }`}
                   style={{ width: `${results.confidence}%` }}
                 >
                   <div className="absolute inset-0 bg-[linear-gradient(90deg,transparent,rgba(255,255,255,0.2),transparent)] animate-shine" />
@@ -100,7 +122,11 @@ export function AnalysisResults({ isAnalyzing, results }: AnalysisResultsProps) 
             </div>
 
             {/* Area affected */}
-            <div className="bg-surface-900 p-6 rounded-lg border border-aqua/10 relative overflow-hidden">
+            <div className={`p-6 rounded-lg border relative overflow-hidden ${
+              results.confidence === 100 
+                ? 'bg-red-900/20 border-red-500/30' 
+                : 'bg-green-900/20 border-green-500/30'
+            }`}>
               <div className="absolute inset-0 bg-gradient-radial from-aqua/5 to-transparent opacity-30" />
               <div className="relative">
                 <div className="flex items-center justify-between mb-2">
@@ -108,22 +134,49 @@ export function AnalysisResults({ isAnalyzing, results }: AnalysisResultsProps) 
                     <Map className="w-5 h-5 text-aqua" />
                     Area Affected
                   </span>
-                  <span className="text-2xl text-aqua font-bold">{results.area} km²</span>
+                  <span className={`text-2xl font-bold ${
+                    results.confidence === 100 ? 'text-red-400' : 'text-green-400'
+                  }`}>{results.area} km²</span>
                 </div>
                 <p className="text-sm text-blue-200/60 flex items-center gap-2">
                   <FileCheck className="w-4 h-4" />
-                  Estimated surface area of detected oil spill
+                  {results.confidence === 100 
+                    ? 'Estimated surface area of detected oil spill' 
+                    : 'No oil spill detected in this area'}
                 </p>
               </div>
             </div>
           </div>
         ) : (
           <div className="text-center py-16">
-            <AlertCircle className="w-20 h-20 text-blue-400/30 mx-auto mb-6" />
-            <p className="text-2xl text-blue-200 mb-3">No Image Uploaded</p>
-            <p className="text-blue-200/60 max-w-sm mx-auto">
-              Upload a satellite image to see our AI detection system in action
-            </p>
+            <div className="relative w-32 h-32 mx-auto mb-8">
+              <div className="absolute inset-0 border-4 border-blue-400/20 rounded-full" />
+              <div className="absolute inset-4 border-4 border-blue-400/30 rounded-full" />
+              <div className="absolute inset-8 border-4 border-blue-400/40 rounded-full" />
+              <div className="absolute inset-0 flex items-center justify-center">
+                <AlertCircle className="w-16 h-16 text-blue-400/50" />
+              </div>
+            </div>
+            <div className="space-y-4">
+              <h3 className="text-2xl font-semibold text-blue-100">Ready to Analyze</h3>
+              <p className="text-blue-200/60 max-w-sm mx-auto">
+                Upload a satellite image to detect potential oil spills using our advanced AI model
+              </p>
+              <div className="flex items-center justify-center gap-8 mt-6">
+                <div className="text-center">
+                  <div className="text-2xl font-bold text-aqua mb-1">240x240</div>
+                  <div className="text-sm text-blue-200/60">Image Size</div>
+                </div>
+                <div className="text-center">
+                  <div className="text-2xl font-bold text-aqua mb-1">98%</div>
+                  <div className="text-sm text-blue-200/60">Model Accuracy</div>
+                </div>
+                <div className="text-center">
+                  <div className="text-2xl font-bold text-aqua mb-1">&lt;30s</div>
+                  <div className="text-sm text-blue-200/60">Process Time</div>
+                </div>
+              </div>
+            </div>
           </div>
         )}
       </div>

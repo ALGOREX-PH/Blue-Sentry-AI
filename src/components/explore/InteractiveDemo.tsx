@@ -19,9 +19,11 @@ export function InteractiveDemo() {
                 />
                 <div className="absolute inset-0 bg-gradient-radial from-transparent to-deep-900/50" />
               </div>
+              <div className="flex flex-wrap justify-center gap-4">
               <Button variant="secondary" className="mt-4">
                 Toggle Heatmap
               </Button>
+              </div>
             </div>
 
             <div>

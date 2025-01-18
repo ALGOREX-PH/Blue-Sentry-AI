@@ -220,9 +220,11 @@ export function ImageUpload() {
             <p className="text-blue-200/60">
               Don't have a satellite image? Try our demo data below
             </p>
+            <div className="flex flex-wrap justify-center gap-4">
             <Button variant="secondary" className="mt-4">
               Load Demo Image
             </Button>
+            </div>
           </div>
         </div>
       </div>

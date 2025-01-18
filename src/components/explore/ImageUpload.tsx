@@ -47,15 +47,29 @@ export function ImageUpload() {
 
   const analyzeImage = () => {
     setIsAnalyzing(true);
-    // Simulate CNN analysis
+    // Random delay between 2-3 seconds for realistic analysis simulation
+    const delay = 2000 + Math.random() * 1000;
+    
     setTimeout(() => {
+      // 50/50 chance of detecting oil spill
+      const hasOilSpill = Math.random() < 0.5;
+      
+      // Generate appropriate confidence scores and area based on detection
       setAnalysisResults({
-        status: 'Oil Spill Detected',
-        confidence: 98.5,
-        area: 2.7
+        status: hasOilSpill ? 'Oil Spill Detected' : 'Clean Water',
+        confidence: hasOilSpill ? 
+          // For oil spills: 85-98% confidence
+          Math.floor(Math.random() * (98 - 85 + 1) + 85) :
+          // For clean water: 95-100% confidence
+          Math.floor(Math.random() * (100 - 95 + 1) + 95),
+        area: hasOilSpill ?
+          // For oil spills: 2.0-8.0 km²
+          Number((Math.random() * (8 - 2) + 2).toFixed(1)) :
+          // For clean water: 0 km²
+          0
       });
       setIsAnalyzing(false);
-    }, 2000);
+    }, delay);
   };
 
   const clearImage = () => {

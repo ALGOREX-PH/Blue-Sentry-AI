@@ -1,5 +1,7 @@
 import { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import { GoogleGenerativeAI } from '@google/generative-ai';
+import { checkForNavigation } from '../utils/chatNavigation';
 
 const genAI = new GoogleGenerativeAI("AIzaSyBQ7AHGAho_F0toPhNttjzEaop4iHIZ1UI");
 
@@ -9,6 +11,7 @@ interface Message {
 }
 
 export function useChat() {
+  const navigate = useNavigate();
   const [messages, setMessages] = useState<Message[]>([
     {
       role: 'assistant',
@@ -21,9 +24,22 @@ export function useChat() {
     try {
       setIsLoading(true);
       
+      // Check for navigation triggers
+      const shouldNavigate = checkForNavigation(content, navigate);
+      
       // Add user message
       const userMessage: Message = { role: 'user', content };
       setMessages(prev => [...prev, userMessage]);
+
+      // If navigation occurred, add a helpful response
+      if (shouldNavigate) {
+        setMessages(prev => [...prev, {
+          role: 'assistant',
+          content: "I've redirected you to the relevant page. Let me know if you need any specific information!"
+        }]);
+        setIsLoading(false);
+        return;
+      }
 
       // Get Gemini response
       const model = genAI.getGenerativeModel({ model: "gemini-pro" });

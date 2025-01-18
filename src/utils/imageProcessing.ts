@@ -34,8 +34,8 @@ export async function loadModel() {
   }
 
   try {
-    // Convert and load the model
-    cachedModel = await tf.loadLayersModel('/src/model/Oil_Detection_Model.json');
+    // Load the sharded model
+    cachedModel = await tf.loadLayersModel('/src/model/model.json');
     return cachedModel;
   } catch (error) {
     console.error('Error loading model:', error);

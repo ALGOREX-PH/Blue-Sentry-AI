@@ -3,7 +3,7 @@ import { Upload } from 'lucide-react';
 import { Button } from '../../ui/Button';
 import { UploadZone } from './UploadZone';
 import { AnalysisResults } from './AnalysisResults';
-import { preprocessImage, loadModel } from '../../../utils/imageProcessing';
+import { preprocessImage, loadModel, calculateSpillArea } from '../../../utils/imageProcessing';
 import * as tf from '@tensorflow/tfjs';
 
 export function ImageUpload() {

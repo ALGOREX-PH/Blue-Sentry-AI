@@ -31,7 +31,12 @@ import { CommunityPage } from './pages/Community';
 import { TransparencyPage } from './pages/Transparency';
 import { EducationPage } from './pages/Education';
 import { GlobalCollaborationPage } from './pages/GlobalCollaboration';
+/*
 
+Coded by Danielle Bagaforo Meer
+Lets Connect : https://www.linkedin.com/in/algorexph
+
+*/
 export function App() {
   return (
     <Router>

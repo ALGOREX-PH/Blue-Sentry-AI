@@ -3,7 +3,7 @@ import { useNavigate } from 'react-router-dom';
 import { GoogleGenerativeAI } from '@google/generative-ai';
 import { checkForNavigation } from '../utils/chatNavigation';
 
-const genAI = new GoogleGenerativeAI("AIzaSyAM5TngKks5XIqqBfAGLibg4ewXacT7lPc");
+const genAI = new GoogleGenerativeAI("AIzaSyAJwC5iKrCPQKIA_kAf1Vg2PGr4OH8G9CI");
 
 interface Message {
   role: 'user' | 'assistant';
